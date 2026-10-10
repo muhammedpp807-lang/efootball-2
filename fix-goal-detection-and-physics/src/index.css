@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  background: #04070f;
+  color-scheme: dark;
+}
+
+body {
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Perspective pitch backdrop used behind the menus. */
+.menu-pitch {
+  background-color: #0e5f33;
+  background-image:
+    linear-gradient(90deg, transparent 49.7%, rgba(255, 255, 255, 0.32) 49.7%, rgba(255, 255, 255, 0.32) 50.3%, transparent 50.3%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0 7%, rgba(0, 0, 0, 0.08) 7% 14%);
+  transform: perspective(900px) rotateX(64deg) scale(1.5);
+  transform-origin: 60% 42%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 999px;
+}
